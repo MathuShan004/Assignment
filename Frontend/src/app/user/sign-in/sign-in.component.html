@@ -1,0 +1,20 @@
+
+<form #loginForm ="ngForm" class="col s12 white">
+  <div class="row">
+    <div class="input-field col s12">
+      
+      <input type="text" #UserName ngModel name="UserName" placeholder="Username" required>
+    </div>
+  </div>
+  <div class="row">
+     <div class="input-field col s12">
+       
+       <input type="password" #Password ngModel name="Password" placeholder="Password" required>
+     </div>
+   </div>
+   <div class="row">
+       <div class="input-field col s12">
+         <button  class="btn-large btn-submit" type="submit">Login</button>
+       </div>
+     </div>
+</form>

@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row">
+    <div class="col s8 offset-s2">
+      <div class="card grey lighten-2">
+        <div class="card-tabs">
+          <ul class="tabs tabs-fixed-width tabs-transparent">
+            <li class="tab">
+              <a routerLink='/login' routerLinkActive='active'>Sign In</a>
+            </li>
+           
+          </ul>
+        </div>
+        <div class="card-content white">
+          <div class="row">
+            <div *ngIf="isLoginError" class="red-text center error-message">
+              <i class="material-icons">error</i> Incorrect username or password
+          </div>
+            <form #loginForm ="ngForm" class="col s12 white" (ngSubmit)="OnSubmit(UserName.value,Password.value)">
+              <div class="row">
+                <div class="input-field col s12">
+                  
+                  <input type="text" #UserName ngModel name="UserName" placeholder="Username" required>
+                </div>
+              </div>
+              <div class="row">
+                 <div class="input-field col s12">
+                   
+                   <input type="password" #Password ngModel name="Password" placeholder="Password" required>
+                 </div>
+               </div>
+               <div class="row">
+                   <div class="input-field col s12">
+                     <button  class="btn-large btn-submit" type="submit">Login</button>
+                   </div>
+                 </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
